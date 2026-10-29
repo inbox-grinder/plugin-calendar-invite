@@ -1,0 +1,46 @@
+{
+  "message": {
+    "accountId": "account-personal",
+    "mailboxName": "INBOX",
+    "uid": 7788,
+    "messageId": "<hotel-confirmation@hotel.example>",
+    "size": 2048,
+    "sourceId": "confirmation"
+  },
+  "sender": {
+    "name": "Harbour Hotel",
+    "address": "reservations@hotel.example",
+    "domain": "hotel.example"
+  },
+  "recipients": {
+    "to": [
+      {
+        "name": "User",
+        "address": "user@example.com",
+        "domain": "example.com"
+      }
+    ],
+    "cc": [],
+    "bcc": []
+  },
+  "subject": "Event invitation",
+  "date": "2026-10-25T12:00:00Z",
+  "headers": {},
+  "textBody": "Event ID: planning@example.com\nEvent: Planning, review\nStart: 2026-11-01T15:00:00Z\nEnd: 2026-11-01T16:00:00Z\nLocation: Room 2; HQ",
+  "htmlBody": null,
+  "links": [],
+  "attachments": [],
+  "invocation": {
+    "schemaVersion": "1",
+    "config": {},
+    "sources": [
+      {
+        "id": "confirmation",
+        "kind": "email"
+      }
+    ],
+    "capabilities": [
+      "records"
+    ]
+  }
+}

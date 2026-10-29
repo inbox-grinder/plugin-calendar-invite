@@ -1,0 +1,52 @@
+{
+  "message": {
+    "accountId": "account-personal",
+    "mailboxName": "INBOX",
+    "uid": 7788,
+    "messageId": "<hotel-confirmation@hotel.example>",
+    "size": 2048,
+    "sourceId": "confirmation"
+  },
+  "sender": {
+    "name": "Harbour Hotel",
+    "address": "reservations@hotel.example",
+    "domain": "hotel.example"
+  },
+  "recipients": {
+    "to": [
+      {
+        "name": "User",
+        "address": "user@example.com",
+        "domain": "example.com"
+      }
+    ],
+    "cc": [],
+    "bcc": []
+  },
+  "subject": "Event invitation",
+  "date": "2026-10-25T12:00:00Z",
+  "headers": {},
+  "textBody": "See attached invitation.",
+  "htmlBody": null,
+  "links": [],
+  "attachments": [],
+  "invocation": {
+    "schemaVersion": "1",
+    "config": {},
+    "sources": [
+      {
+        "id": "confirmation",
+        "kind": "email"
+      }
+    ],
+    "capabilities": [
+      "records"
+    ]
+  },
+  "calendarAttachments": [
+    {
+      "contentType": "text/calendar",
+      "content": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//Inbox Grinder//Fixture//EN\r\nBEGIN:VEVENT\r\nUID:planning@example.com\r\nSUMMARY:Planning\\, re\r\n view\r\nDTSTART:20261101T150000Z\r\nDTEND:20261101T160000Z\r\nLOCATION:Room 2\\; HQ\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1",
+  "id": "reservation",
+  "kind": "declarative",
+  "recordFamily": "reservation",
+  "familyVersion": 1,
+  "surfaces": [
+    "row",
+    "card",
+    "detail"
+  ],
+  "layout": [
+    {
+      "type": "title",
+      "field": "eventTitle"
+    },
+    {
+      "type": "fieldList",
+      "fields": [
+        {
+          "label": "Start",
+          "field": "startAt"
+        },
+        {
+          "label": "End",
+          "field": "endAt"
+        },
+        {
+          "label": "Location",
+          "field": "location"
+        }
+      ]
+    }
+  ]
+}

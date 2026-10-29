@@ -1,0 +1,72 @@
+{
+  "schemaVersion": "1",
+  "id": "com.inboxgrinder.examples.calendar-invite",
+  "name": "Calendar invitations",
+  "description": "Extracts single UTC calendar events and labelled text invitations.",
+  "version": "0.1.0",
+  "runtime": "wasm-component",
+  "entrypoint": "calendar_invite.wasm",
+  "publisher": {
+    "name": "Inbox Grinder",
+    "repository": "https://github.com/inbox-grinder/plugin-calendar-invite"
+  },
+  "compatibility": {
+    "inboxGrinderApi": "0.1"
+  },
+  "permissions": [
+    "read_metadata",
+    "read_text_body",
+    "read_calendar_attachments"
+  ],
+  "matches": {
+    "subjectContains": [
+      "invite",
+      "invitation",
+      "event"
+    ]
+  },
+  "contentNeeds": {
+    "metadata": true,
+    "headers": [],
+    "textBody": true,
+    "htmlBody": false,
+    "links": false,
+    "attachments": "calendar"
+  },
+  "templates": [
+    {
+      "id": "reservation",
+      "kind": "declarative",
+      "path": "template.json"
+    }
+  ],
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {}
+  },
+  "recordContract": {
+    "version": 1,
+    "identityVersion": 1,
+    "updateKeyVersion": 1,
+    "capabilities": [
+      {
+        "name": "records",
+        "version": 1,
+        "required": true
+      }
+    ],
+    "templates": [
+      {
+        "family": "reservation",
+        "version": 1
+      }
+    ],
+    "services": []
+  },
+  "catalogue": {
+    "categories": [
+      "utilities"
+    ]
+  }
+}
